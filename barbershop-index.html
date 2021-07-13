@@ -25,9 +25,9 @@
   </nav>
 </header>
 <main>
-  <h1 class="hiden">Барбершоп Бородинский</h1>
+  <h1 class="visually-hidden">Барбершоп Бородинский</h1>
   <section class="features">
-    <h2 class="hiden">Преимущества</h2>
+    <h2 class="visually-hidden">Преимущества</h2>
     <ul>
       <li>
         <h3>Быстро</h3>
@@ -66,6 +66,7 @@
     </ul>
     <a href="#">Все новости</a>
   </section>
+
   <section class="gallery">
     <h2>Фотогалерея</h2>
     <figure>
@@ -74,6 +75,7 @@
     <button class="button">Вперёд</button>
     <button class="button">Назад</button>
   </section>
+
   <section class="contact-info">
     <h2>Контактная информаця</h2>
             <p>Барбершоп "Бородинский"<br>
@@ -91,10 +93,22 @@
     <p>Укажите желаемую дату и время и мы свяжемся
     с вами для подтверждения брони</p>
     <form class="appointment-info" action="index.html" method="post">
-    <p class="appointment-item">Дата<input type="text" name="date" value="" placeholder="08.10.2017"></p>
-    <p class="appointment-item">Время<input type="text" name="time" value="" placeholder="10:00"></p>
-    <p class="appointment-item">Ваше имя<input type="text" name="name" value="" placeholder="Борода"></p>
-    <p class="appointment-item">Телефон<input type="text" name="phone" value="" placeholder="+7 123 456-78-90"></p>
+    <p class="appointment-item">
+      <label for="appointment-date">Дата</label>
+      <input id="appointment-date" type="text" name="date" value="" placeholder="08.10.2017">
+    </p>
+    <p class="appointment-item">
+      <label for="appointment-time">Время</label>
+      <input id="appointment-time" type="text" name="time" value="" placeholder="10:00">
+    </p>
+    <p class="appointment-item">
+      <label for="appointment-name">Ваше Имя</label>
+      <input id="appointment-name" type="text" name="name" value="" placeholder="Борода">
+    </p>
+    <p class="appointment-item">
+      <label for="appointment-phone">Телефон</label>
+      <input id="appointment-phone" type="text" name="phone" value="" placeholder="+7 123 456-78-90">
+    </p>
     <button class="button" type="submit" name="button">Отправить</button>
     </form>
   </section>
@@ -114,23 +128,37 @@
 </div>
 <p class="right"><b>Разработано:</b> <a class="button" href="#">HTML ACADEMY</a></p>
 </footer>
+
 <section class="model-window">
   <h2>Личный кабинет</h2>
   <p>Введите пожалуйста свой логин и пароль</p>
   <form class="login-form" action="index.html" method="post">
-    <p><input class="login-icon-user" type="text" name="login" value="" placeholder="Логин"></p>
-    <p><input class="login-icon-password" type="text" name="password" value="" placeholder="Пароль"></p>
+    <p>
+      <label class="visually-hidden" for="user-login">Логин</label>
+      <input id="user-login" class="login-icon-user" type="text" name="login" value="" placeholder="Логин">
+    </p>
+    <p>
+      <label class="visually-hidden" for="user-password">Пароль</label>
+      <input id="user-password" class="login-icon-password" type="text" name="password" value="" placeholder="Пароль">
+    </p>
     <p class="login-password-info">
-    <input type="checkbox" name="remember" class="visually-hidden" value="">
-  Запомните меня
-<a class="restore" href="#">Я забыл пароль!</a>
-</p>
-    <button type="submit" class="button" name="button">Войти</button>
+      <label class="login-checkbox">
+      <input  type="checkbox" name="remember" class="visually-hidden" value="">
+      <span class="checkbox-indicator"></span>
+      Запомните меня
+    </label>
+      <a class="restore" href="#">Я забыл пароль!</a>
+    </p>
+    <label for="login">Войти</label>
+    <button id="login" type="submit" name="button"></button>
   </form>
-  <span class="modal-close">x</span>
+  <button class="modal-close" type="button">Закрыть</button>
 </section>
 <section class="map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
-  <span class="modal-close">x</span>
+  <p>
+    <img src="" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+   </p>
+<button class="modal-close" type="button">Закрыть</button>
 </section>
 </body>
