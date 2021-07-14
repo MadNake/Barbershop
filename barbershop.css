@@ -1,7 +1,17 @@
 
 body {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-family: 'Encode Sans SC', arial, sans-serif;
+  font-family: 'Montserrat', arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+}
 
+a,
+a:visited {
+  color: inherit;
 }
 
 .visually-hidden {
@@ -20,68 +30,19 @@ button {
  border: none;
 }
 
-main {
-margin: 5px;
-padding: 5px;
-}
-
-
 .button {
   padding: 10px 15px;
   margin: 0px 10px;
   background-color: #000000;
   color: white;
   text-decoration: none;
-  font-family: 'Encode Sans SC', sans-serif;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Encode Sans SC', arial, sans-serif;
+  font-family: 'Montserrat', arial, sans-serif;
   box-shadow: 0 0 10px black;
-  text-transform: uppercase;
+
 }
 
 .button:hover,
 .button:focus {
   background-color: red;
-}
-
-.news {
-  float:left;
-  width: 50%;
-}
-
-.gallery {
-  float: right;
-  width: 50%;
-  margin-bottom: 8em;
-}
-
-.contact-info {
-  float: left;
-  width: 50%;
-
-}
-
-.appointment {
-float: right;
-width: 50%;
-margin-bottom: 1px;
-}
-
-.left {
-  float: left;
-  width: 33%;
-}
-
-.right {
-  float: right;
-  width: 33%;
-}
-
-footer {
-  margin: 1px;
-  padding: 1px;
-}
-
-.social {
-  width: 200px;
-
 }
