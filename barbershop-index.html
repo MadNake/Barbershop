@@ -4,15 +4,15 @@
   <link rel="stylesheet" href="../normalize.css">
   <link rel="stylesheet" href="barbershop.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@300&family=Montserrat:ital,wght@1,400;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <meta charset="utf-8">
   <title>Барбершоп Бородинский</title>
 </head>
 <body>
 <header>
   <nav>
-    <a href="#"><img width="250 px" height="250 px" src="svg-barbershop/index-logo.svg" alt="Логотип барбершопа"></a>
+    <a href="#"><img width="368 px" height="153 px" src="img/index-logo.svg" alt="Логотип барбершопа"></a>
     <ul class="site-navigation">
       <li><a href="#">Информация</a></li>
       <li><a href="#">Новости</a></li>
@@ -25,6 +25,7 @@
     </ul>
   </nav>
 </header>
+
 <main>
   <h1 class="visually-hidden">Барбершоп Бородинский</h1>
   <section class="features">
@@ -50,6 +51,9 @@
       </li>
     </ul>
   </section>
+
+  <div class="index-bg">
+
   <section class="news">
     <h2>Новости</h2>
     <ul>
@@ -71,11 +75,12 @@
   <section class="gallery">
     <h2>Фотогалерея</h2>
     <figure>
-      <a href="#"><img src="img/studio.jpg" width="286" height="164" alt="Интерьер"></a>
+      <a href="#"><img src="img/photogallery.jpg" width="286" height="164" alt="Интерьер"></a>
     </figure>
     <button class="button">Вперёд</button>
     <button class="button">Назад</button>
   </section>
+  </div>
 
   <section class="contact-info">
     <h2>Контактная информаця</h2>
@@ -89,6 +94,7 @@
      <a href="#" class="button">Как проехать</a>
      <a href="#" class="button"> Обратная связь</a>
   </section>
+
   <section class="appointment">
     <h2>Записаться</h2>
     <p>Укажите желаемую дату и время и мы свяжемся
@@ -113,12 +119,15 @@
     <button class="button" type="submit" name="button">Отправить</button>
     </form>
   </section>
+
 </main>
+
 <footer>
   <p class="left">Барбершоп "Бородинский"<br>
   Адрес: Г. Санкт-Петербург, ул. Б. Конюшенная, Д. 19/8 <br>
 <a href="map">Как нас найти?</a><br>
 Телефон: +7 (495) 666-02-66</p>
+
 <div class="social">
   <b>Давайте дружить!</b>
   <ul>
@@ -151,15 +160,17 @@
       <a class="restore" href="#">Я забыл пароль!</a>
     </p>
     <label for="login">Войти</label>
-    <button id="login" type="submit" name="button"></button>
+    <button id="login" class="visually-hidden" type="submit" name="button"></button>
   </form>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
+
 <section class="map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
   <p>
-    <img src="" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+    <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
    </p>
 <button class="modal-close" type="button">Закрыть</button>
 </section>
 </body>
+</html>
