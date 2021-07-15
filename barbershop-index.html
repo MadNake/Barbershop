@@ -11,7 +11,7 @@
 </head>
 <body>
 <header>
-  <nav>
+  <nav class="main-nav">
     <a href="#"><img width="368 px" height="153 px" src="img/index-logo.svg" alt="Логотип барбершопа"></a>
     <ul class="site-navigation">
       <li><a href="#">Информация</a></li>
@@ -69,7 +69,7 @@
       <time datetime="2021-01-18"> 18 января</time>
       </li>
     </ul>
-    <a href="#">Все новости</a>
+    <a class="button" href="#">Все новости</a>
   </section>
 
   <section class="gallery">
@@ -126,13 +126,13 @@
 
 </main>
 
-<footer>
-  <p class="left">Барбершоп "Бородинский"<br>
+<footer class="main-footer">
+  <p class="footer-contact">Барбершоп "Бородинский"<br>
   Адрес: Г. Санкт-Петербург, ул. Б. Конюшенная, Д. 19/8 <br>
-<a href="map">Как нас найти?</a><br>
+<a href="">Как нас найти?</a><br>
 Телефон: +7 (495) 666-02-66</p>
 
-<div class="social">
+<div class="footer-social">
   <b>Давайте дружить!</b>
   <ul>
     <li><a href="vk.com">Вконтакте</a></li>
@@ -140,10 +140,10 @@
     <li><a href="instagram.com">Инстаграм</a></li>
   </ul>
 </div>
-<p class="right"><b>Разработано:</b> <a class="button" href="#">HTML ACADEMY</a></p>
+<p class="developers"><b>Разработано:</b> <a class="button" href="#">HTML ACADEMY</a></p>
 </footer>
 
-<section class="model-window">
+<section class="modal modal-login">
   <h2>Личный кабинет</h2>
   <p>Введите пожалуйста свой логин и пароль</p>
   <form class="login-form" action="index.html" method="post">
@@ -153,11 +153,11 @@
     </p>
     <p>
       <label class="visually-hidden" for="user-password">Пароль</label>
-      <input id="user-password" class="login-icon-password" type="text" name="password" value="" placeholder="Пароль">
+      <input id="user-password" class="login-icon-password" type="password" name="password" value="" placeholder="Пароль">
     </p>
     <p class="login-password-info">
       <label class="login-checkbox">
-      <input  type="checkbox" name="remember" class="visually-hidden" value="">
+      <input  type="checkbox" name="remember"  value="">
       <span class="checkbox-indicator"></span>
       Запомните меня
     </label>
@@ -169,7 +169,7 @@
   <button class="modal-close" type="button">Закрыть</button>
 </section>
 
-<section class="map">
+<section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
   <p>
     <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">

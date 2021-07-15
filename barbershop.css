@@ -3,10 +3,11 @@ body {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  font-family: 'PT Sans Narrow', arial sans-serif;
+  font-family: 'PT Sans Narrow', arial, sans-serif;
   color: #ffffff;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 700;
 
   background-color: #000000;
   background-image: url("img/bg.png");
@@ -26,14 +27,14 @@ body {
  overflow: hidden;
 }
 
-nav {
+.main-nav {
   background-color: #000000;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
 }
 
-nav ul {
+.site-navigation {
   list-style: none;
 }
 
@@ -64,10 +65,6 @@ a:visited {
 }
 
 
-button {
- border: none;
-}
-
 .index-bg {
   background-color: #f8f5f2;
   color: #000000;
@@ -80,4 +77,98 @@ button {
   text-transform: uppercase;
   background-color: #000000;
   color: #ffffff;
+  border: none;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: #663d15;
+}
+
+.news time {
+  text-transform: none;
+}
+
+.appointment-item input {
+  background-color: transparent;
+  border: 2px solid #000000;
+}
+
+.appointment-item input:focus {
+  border-color: #663d15;
+  outline: none;
+}
+
+.main-footer {
+  color: #ffffff;
+  background-color: #212121;
+}
+
+.footer-contact a {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus {
+  text-decoration: none;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
+
+.developers {
+  text-align: center;
+}
+
+.developers .button:hover,
+.developers .button:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.modal {
+  color: #000000;
+
+  background-color: #f8f3f0;
+}
+
+.modal h2 {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-login input[type="text"],
+.modal-login input[type="password"] {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.modal-login input:focus {
+    border-color: #663d15;
+}
+
+.login-checkbox:focus,
+.login-checkbox:hover {
+  color: #663d15;
+}
+
+.restore {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+  text-decoration: none;
 }
