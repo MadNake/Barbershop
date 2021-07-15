@@ -39,7 +39,6 @@ nav ul {
 
 a,
 a:visited {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -64,28 +63,21 @@ a:visited {
   list-style: none;
 }
 
-.index-bg {
-  background-color: #f8f5f2;
-  color: #000000;
-}
 
 button {
  border: none;
 }
 
-.button {
-  padding: 10px 15px;
-  margin: 0px 10px;
-  background-color: #000000;
-  color: white;
-  text-decoration: none;
-  font-family: 'Encode Sans SC', arial, sans-serif;
-  font-family: 'Montserrat', arial, sans-serif;
-  box-shadow: 0 0 10px black;
-
+.index-bg {
+  background-color: #f8f5f2;
+  color: #000000;
 }
 
-.button:hover,
-.button:focus {
-  background-color: red;
+.button {
+  font: inherit;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: #000000;
+  color: #ffffff;
 }
