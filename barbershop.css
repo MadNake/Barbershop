@@ -34,13 +34,18 @@ body {
   color: #ffffff;
 }
 
-.site-navigation {
+.site-navigation,
+.user-navigation {
   list-style: none;
 }
 
-a,
-a:visited {
+a{
   text-decoration: none;
+}
+
+.site-navigation a,
+.user-navigation a {
+  color: #ffffff;
 }
 
 .site-navigation a:hover,
@@ -52,6 +57,9 @@ a:visited {
 
 .features ul {
   list-style: none;
+  }
+
+.features li {
   text-align: center;
 }
 
@@ -59,11 +67,6 @@ a:visited {
   font-size: 30px;
   line-height: 42px;
 }
-
-.news ul {
-  list-style: none;
-}
-
 
 .index-bg {
   background-color: #f8f5f2;
@@ -86,11 +89,21 @@ a:visited {
   background-color: #663d15;
 }
 
+.news ul {
+  list-style: none;
+}
+
 .news time {
   text-transform: none;
 }
 
+.gallery-content {
+  background-color: #cccccc;
+  border: 7px solid #ffffff;
+}
+
 .appointment-item input {
+  font: inherit;
   background-color: transparent;
   border: 2px solid #000000;
 }
