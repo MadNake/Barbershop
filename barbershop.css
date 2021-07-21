@@ -25,10 +25,12 @@ body {
  padding: 0;
  clip: rect(0 0 0 0);
  overflow: hidden;
+ margin-right:
 }
 
+
 .main-nav {
-  background-color: #000000;
+  background-color: transparent;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -37,6 +39,13 @@ body {
 .site-navigation,
 .user-navigation {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-navigation li,
+.user-navigation li {
+  display: inline;
 }
 
 a{
@@ -46,6 +55,7 @@ a{
 .site-navigation a,
 .user-navigation a {
   color: #ffffff;
+
 }
 
 .site-navigation a:hover,
@@ -57,10 +67,14 @@ a{
 
 .features ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
   }
 
 .features li {
   text-align: center;
+  width: 300px;
+
 }
 
 .features h3 {
@@ -184,4 +198,64 @@ a{
 .restore:hover,
 .restore:focus {
   text-decoration: none;
+}
+
+/* сетки */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main-nav-logo {
+  order: 2;
+}
+
+.main-nav-wrapper {
+  width: 100%;
+  background-color: #000000;
+  margin-bottom: 60px;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.site-navigation {
+  width: 620px;
+  margin: 0;
+  padding: 0
+}
+
+.user-navigation {
+  width: 140px;
+  margin: 0;
+  padding: 0
+}
+
+.main-nav-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features .container ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-bg {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 80px;
+}
+
+.news {
+  width: 380px;
+}
+
+.gallery {
+  width: 300px;
 }
