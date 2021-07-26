@@ -247,6 +247,8 @@ a{
 }
 
 .index-bg {
+  margin: 0 auto;
+  width: 940px;
   display: flex;
   justify-content: space-between;
   padding: 50px 80px;
@@ -258,4 +260,9 @@ a{
 
 .gallery {
   width: 300px;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
 }
