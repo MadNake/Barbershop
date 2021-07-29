@@ -3,25 +3,37 @@
 <head>
   <meta charset="utf-8">
   <title>Барбершоп Бородинский</title>
-  <lihk rel="stylesheet" href=" ">
-</head>
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="barbershop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    </head>
 <body>
 <header>
-  <nav>
-    <a href="#"><img src="svg-barbershop/index-logo.svg" alt="Логотип барбершопа" height="200" width="300"></a>
-    <ul>
+  <nav class="mainor-nav">
+
+      <div class="container">
+    <a href="barbershop-index.html"><img src="svg-barbershop/index-logo.svg" alt="Логотип барбершопа" height="30" width="60"></a>
+    <ul class="site-navigation">
       <li><a href="#">Информация</a></li>
       <li><a href="#">Новости</a></li>
       <li><a href="#">Прайс-лист</a></li>
       <li><a href="#">Магазин</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
-    <ul>
+    <ul class="user-navigation">
       <li><a href="#">Вход</a></li>
     </ul>
+  </div>
+
   </nav>
   </header>
-  <main>
+
+  <main class="barbershop-shop">
+
+    <div class="index-bg">
+
 <section class="nav-shop">
   <h1>Средства для ухода</h1>
   <ul>
@@ -29,6 +41,10 @@
     <li>магазин</li>
     <li>средства для ухода</li>
   </ul>
+</section>
+
+<div class="container">
+  <section class="filter">
 <h2>производители</h2>
 <ul>
   <li>BAXTER OF CALIFORNIA</li>
@@ -45,11 +61,12 @@
   <li>Аксессуары</li>
 </ul>
 <button type="button" name="button" class="button">показать</button>
-</section class="filter">
-<section>
-  <table border="1">
-    <tr>
-      <td><img src="" alt="Набор для путешествий BAXTER OF CALIFORNIA">
+</section>
+
+<section class="table-product">
+
+    <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Набор для путешествий BAXTER OF CALIFORNIA">
         <p>Набор для путешествий "BAXTER OF CALIFORNIA"</p>
         <table>
           <tr>
@@ -57,8 +74,10 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-       </td>
-      <td><img src="" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA">
+      </div>
+
+    <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Увлажняющий кондиционер BAXTER OF CALIFORNIA">
         <p>Увлажняющий кондиционер "BAXTER OF CALIFORNIA"</p>
         <table>
           <tr>
@@ -66,8 +85,10 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-      </td>
-      <td><img src="" alt="Гель для волос SUAVECITO">
+    </div>
+
+    <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Гель для волос SUAVECITO">
         <p>Набор для путешествий "BAXTER OF CALIFORNIA"</p>
         <table>
           <tr>
@@ -75,10 +96,10 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-      </td>
-    </tr>
-    <tr>
-      <td><img src="" alt="Глина для укладки волос AMERICAN CREW">
+    </div>
+
+    <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Глина для укладки волос AMERICAN CREW">
         <p>Глина для укладки волос "AMERICAN CREW"</p>
         <table>
           <tr>
@@ -86,8 +107,10 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-      </td>
-      <td><img src="" alt="Гель для волос AMERICAN CREW">
+      </div>
+
+      <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Гель для волос AMERICAN CREW">
         <p>Гель для волос "AMERICAN CREW"</p>
         <table>
           <tr>
@@ -95,8 +118,10 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-      </td>
-      <td><img src="" alt="Набор для бритья BAXTER OF CALIFORNIA">
+      </div>
+
+      <div class="item">
+        <img src="img/123.png" width="220" height="130" alt="Набор для бритья BAXTER OF CALIFORNIA">
         <p>Набор для бритья "BAXTER OF CALIFORNIA"</p>
         <table>
           <tr>
@@ -104,10 +129,9 @@
             <td><button type="button" name="button">Купить</button> </td>
           </tr>
         </table>
-      </td>
-    </tr>
-  </table>
-  <table>
+      </div>
+
+  <table class="slider">
     <tbody>
       <tr>
         <td><span class="button">1</span> </td>
@@ -118,13 +142,16 @@
     </tbody>
   </table>
 </section>
+</div>
+</div>
   </main>
-  <footer>
-    <p>Барбершоп "Бородинский"<br>
+  <footer class="main-footer">
+    <div class="container">
+    <p class="footer-contact">Барбершоп "Бородинский"<br>
     Адрес: Г. Санкт-Петербург, ул. Б. Конюшенная, Д. 19/8 <br>
   <a href="map">Как нас найти?</a><br>
   Телефон: +7 (495) 666-02-66</p>
-  <div class="social">
+  <div class="footer-social">
     <b>Давайте дружить!</b>
     <ul>
       <li><a href="vk.com">Вконтакте</a></li>
@@ -132,5 +159,6 @@
       <li><a href="instagram.com">Инстаграм</a></li>
     </ul>
   </div>
-  <p><b>Разработано:</b> <a class="button" href="#">HTML ACADEMY</a></p>
+  <p  class="developers"><b>Разработано:</b> <br> <a class="button" href="#">HTML ACADEMY</a></p>
+</div>
   </footer>
