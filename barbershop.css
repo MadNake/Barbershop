@@ -13,7 +13,11 @@ body {
   background-image: url("img/bg.png");
   background-position: top center;
   background-repeat: no-repeat;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -44,11 +48,7 @@ body {
   padding: 0;
 }
 
-.site-navigation li,
-.user-navigation li {
-  display: inline;
-  padding-right: 15px;
-}
+
 
 a{
   text-decoration: none;
@@ -57,6 +57,8 @@ a{
 .site-navigation a,
 .user-navigation a {
   color: #ffffff;
+  display: block;
+  padding: 25px 20px;
 
 }
 
@@ -82,14 +84,39 @@ a{
 .features h3 {
   font-size: 30px;
   line-height: 42px;
+  margin: 0;
+  margin-bottom: 60px;
+  position: relative;
 }
 
-.index-bg {
-  background-color: #f8f5f2;
-  color: #000000;
+.features {
+  margin-bottom: 80px;
 }
+
+
+
+.features h3::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -10px;
+  transform: rotate(45deg);
+}
+
+.features p {
+  margin: 0 10px;
+}
+
+
 
 .button {
+  display: inline-block;
+  padding: 10px 30px;
+  margin-right: 16px;
   font: inherit;
   text-align: center;
   vertical-align: middle;
@@ -99,14 +126,32 @@ a{
   border: none;
 }
 
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: #000000;
+}
+
 .button:hover,
 .button:focus,
 .button:active {
   background-color: #663d15;
 }
 
-.news ul {
+.news-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.news-item {
+  margin-bottom: 25px;
+}
+
+.news-item p {
+  margin: 0;
 }
 
 .news time {
@@ -114,11 +159,57 @@ a{
 }
 
 .gallery-content {
+  height: 164px;
+  margin: 0;
   background-color: #cccccc;
   border: 7px solid #ffffff;
 }
 
+.gallery-container {
+  position: relative;
+  height: 260px;
+}
+
+.gallery-container .button {
+  box-sizing: border-box;
+  width: 140px;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.button-back {
+  left: 0;
+}
+
+.button-next {
+  right: 0;
+}
+
+.gallery-content img {
+  width: 286px;
+  height: 164px;
+}
+
+.appointment {
+  width: 300px;
+
+}
+
+.contact-info {
+  width: 380px;
+}
+
+.contact-info p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
 .appointment-item input {
+  box-sizing: border-box;
+  width: 140px;
+  padding: 8px 15px 7px 15px;
+
   font: inherit;
   background-color: transparent;
   border: 2px solid #000000;
@@ -129,10 +220,46 @@ a{
   outline: none;
 }
 
+.appointment-info {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.appointment-item {
+  width: 140px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.appointment .button {
+  width: 100%;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.appointment-item label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
+}
+
+
 .main-footer {
   color: #ffffff;
   background-color: #212121;
 
+}
+
+.footer-contact {
+  margin: 0;
+  margin-right: 80px;
+  width: 320px;
 }
 
 .footer-contact a {
@@ -151,6 +278,42 @@ a{
 
 .footer-social ul {
   list-style: none;
+  display: flex;
+  width: 141px;
+  list-style: none;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-button {
+  width: 43px;
+  height: 43px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+  fill: #000000;
+}
+
+.footer-social b {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.developers b {
+  display: block;
+  margin-bottom: 15px;
 }
 
 .developers {
@@ -219,6 +382,7 @@ a{
   width: 100%;
   background-color: #000000;
   margin-bottom: 60px;
+  height: 70px;
 }
 
 .container {
@@ -229,14 +393,38 @@ a{
 
 .site-navigation {
   width: 620px;
-  margin: 0;
-  padding: 0
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .user-navigation {
-  width: 140px;
-  margin: 0;
-  padding: 0
+  max-width: 140px;
+  display: flex;
+}
+
+.user-navigation .login-link {
+  padding-left: 50px;
+  position: relative;
+}
+
+.login-link::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 18px;
+  top: 27px;
+  left: 24px;
+  background-position: 0 0;
+  background-image: url("img/login.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+  opacity: 1;
 }
 
 .main-nav-wrapper .container {
@@ -255,7 +443,12 @@ a{
   display: flex;
   justify-content: space-between;
   padding: 50px 80px;
-
+  margin-bottom: 35px;
+  background-color: #f8f5f2;
+  color: #000000;
+  background-image: url("img/line.png");
+  background-repeat: no-repeat, repeat;
+  background-position: center, 0 0;
 }
 
 .news {
