@@ -1,5 +1,6 @@
 
 body {
+  min-width: 960px;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
@@ -253,6 +254,8 @@ a{
 .main-footer {
   color: #ffffff;
   background-color: #212121;
+  padding: 60px 0;
+  margin-top: 65px;
 
 }
 
@@ -274,6 +277,7 @@ a{
 
 .footer-social {
   text-align: center;
+  width: 140px;
 }
 
 .footer-social ul {
@@ -318,6 +322,14 @@ a{
 
 .developers {
   text-align: center;
+  width: 150px;
+  margin: 0;
+  margin-left: auto;
+}
+
+.developers .button {
+  margin: 0;
+  display: block;
 }
 
 .developers .button:hover,
@@ -376,6 +388,10 @@ a{
 
 .main-nav-logo {
   order: 2;
+}
+
+.main-header {
+  margin-bottom: 75px;
 }
 
 .main-nav-wrapper {
@@ -438,11 +454,12 @@ a{
 }
 
 .index-bg {
+  box-sizing: border-box;
   margin: 0 auto;
   width: 940px;
   display: flex;
   justify-content: space-between;
-  padding: 50px 80px;
+  padding: 50px 80px; ;
   margin-bottom: 35px;
   background-color: #f8f5f2;
   color: #000000;
@@ -470,7 +487,20 @@ a{
 .barbershop-item {
   width: 100%;
   margin: 0 auto;
+  color: #000000;
+  background-color: #f8f5f2;
+
 }
+
+.active {
+  border-bottom: solid 5px #ffffff;
+}
+
+.site-navigation .logo {
+  width: 50px;
+  height: 24px;
+}
+
 
 .mainor-nav{
   width: 100%;
@@ -483,26 +513,90 @@ a{
 }
 
 .barbershop-item .index-bg {
+  box-sizing: content-box;
   display: block;
+  background-image: none;
+  width: 955px;
+  padding: 60px 140px 45px 130px;
+  margin: 0 auto;
+}
+
+
+.item-img {
+  width: 460px;
+  margin: 0;
+  margin-right: 90px;
+  font-size: 0;
+}
+
+.item-img img {
+  width: 460px;
+  margin: 0;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.item-img img:not(:first-child) {
+  width: 140px;
+}
+
+.item-img img:nth-child(2) {
+  margin-right: 20px;
+}
+
+.item-img img:nth-child(3) {
+  margin-right: 20px;
+}
+
+.detailed-item-description {
+  margin: 40px 0;
+
+
+}
+
+.mainor-footer {
+margin: 0;
+box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 }
 
 .nav-item li {
   list-style: none;
   display: inline;
-  padding-right: 15px;
+  padding-right: 40px;
+
 }
 
-.nav-item ul {
-  padding: 0;
+.nav-item li:not(:last-child) a::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  position: absolute;
+  right: -24.5px;
+  top: 4.75px;
+  transform: rotate(45deg);
 }
 
 .nav-item a {
   color: #000000;
+  position: relative;
 }
 
-.disabled a {
-  color: gray;
+.nav-item ul {
+  padding: 0;
+  margin: 0;
 }
+
+.nav-item h1 {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+
+.nav-item {
+  margin-bottom: 55px;
+}
+
 
 .item-description .container {
   width: inherit;
@@ -516,34 +610,69 @@ a{
   color: gray;
 }
 
-.main-item img {
-  margin: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
 
 .main-item  {
   display: flex;
 }
 
+.main-item .container {
+  width: 385px;
+  padding: 0;
+}
+
 .item-description {
-  margin-bottom: 60px;
+  margin-bottom: 65px;
 }
 
 .price-buy {
   align-items: center;
-
   display: flex;
-
 }
 
 .price-buy p {
   padding: 10px 30px;
-background-color: gray;
+  background-color: #DCDCDC;
+  margin: 0
 }
 
 .price-buy .button {
   padding: 10px 10px;
+  margin: 0;
 }
+
+.item-structure h2 {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.item-structure ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.item-structure li {
+  list-style: none;
+  position: relative;
+}
+
+.item-structure li::before {
+  content: "";
+  background-color: #000000;
+  background-position: 0 0;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  left: -20px;
+  top: 7.5px;
+  transform: rotate(45deg);
+}
+
+.nav-item li:not(:last-child) a:hover,
+.nav-item li:not(:last-child) a:focus {
+  color: #CEAB0C;
+  outline: none;
+}
+
 
 /* Стили для price */
 
@@ -560,9 +689,18 @@ background-color: gray;
    padding:0 10px;
 }
 
+.barbershop-price {
+  background-color: #f8f5f2;
+  color: #000000;
+}
+
 .barbershop-price .index-bg {
+  box-sizing: content-box;
   display: block;
-  height: 70vh;
+  background-image: none;
+  width: 945px;
+  padding: 55px 0 80px;
+  margin: 0 auto;
 }
 
 .nav-price ul {
@@ -572,11 +710,23 @@ background-color: gray;
 .nav-price li {
   list-style: none;
   display: inline;
-  padding-right: 10px;
+  padding-right: 40px;
+}
+
+.nav-price li:not(:last-child) a:before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  position: absolute;
+  right: -24.5px;
+  top: 4.75px;
+  transform: rotate(45deg);
 }
 
 .nav-price a {
   color: #000000;
+  position: relative;
 
 }
 
@@ -603,7 +753,7 @@ background-color: gray;
 }
 
 .price-table {
-  width: 400px;
+  width: 100%;
   border-collapse: collapse;
   border: 2px solid #000;
 }
@@ -614,14 +764,57 @@ background-color: gray;
   border: 2px solid #000;
 }
 
+.price-table p {
+  margin: 0;
 }
 
-footer {
-  position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
+.price-table td:first-child {
+  text-align: left;
+  margin-left: 15px;
 }
+
+.price-table td:first-child p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+
+.price_description_1 {
+  width: 240px;
+}
+
+.price_description_2 {
+  width: 465px;
+}
+
+.price_description_1 ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.price_description_1 li {
+  list-style: none;
+  position: relative;
+}
+
+.price_description_1 li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: #000000;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: -20px;
+  top: 7.5px;
+  transform: rotate(45deg);
+}
+
+.barbershop-price .container {
+  padding: 0;
+}
+
+.price_description_2
 
 /* Стили для shop */
 
@@ -652,4 +845,11 @@ footer {
 .table-product {
   display:flex;
   flex-wrap: wrap;
+}
+
+
+.disabled a {
+  color: gray;
+  cursor: default;
+  pointer-events: none;
 }
