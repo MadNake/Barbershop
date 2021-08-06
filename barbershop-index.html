@@ -173,9 +173,9 @@
 </div>
 </footer>
 
-<section class="modal modal-login visually-hidden">
+<section class="modal modal-login">
   <h2>Личный кабинет</h2>
-  <p>Введите пожалуйста свой логин и пароль</p>
+  <p class="modal-description">Введите пожалуйста свой логин и пароль</p>
   <form class="login-form" action="index.html" method="post">
     <p>
       <label class="visually-hidden" for="user-login">Логин</label>
@@ -187,19 +187,18 @@
     </p>
     <p class="login-password-info">
       <label class="login-checkbox">
-      <input  type="checkbox" name="remember"  value="">
+      <input class="visually-hidden" type="checkbox" name="remember"  value="">
       <span class="checkbox-indicator"></span>
       Запомните меня
     </label>
       <a class="restore" href="#">Я забыл пароль!</a>
     </p>
-    <label for="login">Войти</label>
-    <button id="login" class="visually-hidden" type="submit" name="button"></button>
+    <button class="button" type="submit" name="button">Войти</button>
   </form>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
 
-<section class="modal modal-map visually-hidden">
+<section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
   <p>
     <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">

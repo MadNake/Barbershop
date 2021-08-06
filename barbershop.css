@@ -398,7 +398,7 @@ a{
   width: 100%;
   background-color: #000000;
   margin-bottom: 60px;
-  height: 70px;
+  min-height: 70px;
 }
 
 .container {
@@ -489,11 +489,23 @@ a{
   margin: 0 auto;
   color: #000000;
   background-color: #f8f5f2;
-
 }
 
+
+
 .active {
-  border-bottom: solid 5px #ffffff;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  left: 20px;
+  height: 5px;
+  background-color: #ffffff;
 }
 
 .site-navigation .logo {
@@ -627,15 +639,19 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 .price-buy {
   align-items: center;
   display: flex;
+  width: 190px;
 }
 
 .price-buy p {
+  text-align: center;
+  width: 110px;
   padding: 10px 30px;
   background-color: #DCDCDC;
   margin: 0
 }
 
 .price-buy .button {
+  width: 80px;
   padding: 10px 10px;
   margin: 0;
 }
@@ -676,10 +692,12 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 
 /* Стили для price */
 
-.price-description h2 {
+
+
+/*.price-description h2 {
   width: 100%;
    text-align: center;
-   border-bottom: 1px solid #000;
+   border-bottom: 2px solid #000;
    line-height: 0.1em;
    margin: 10px 0 20px;
 }
@@ -687,6 +705,33 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 .price-description h2 span {
   background:#f8f5f2;
    padding:0 10px;
+}
+*/
+
+.big-heading {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.big-heading::after {
+  margin-left: 25px;
+}
+
+.big-heading::before {
+  margin-right: 25px;
+}
+
+.big-heading::after,
+.big-heading::before {
+  content: "";
+
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  width: 50px;
+  height: 2px;
+  background-color: #000000;
 }
 
 .barbershop-price {
@@ -814,16 +859,75 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
   padding: 0;
 }
 
-.price_description_2
+
 
 /* Стили для shop */
 
- .barbershop-shop .index-bg {
-   display: block;
+ .barbershop-shop {
+   color: #000000;
+   background-color: #f8f5f2;
  }
+
+.main-content {
+  width: 945px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.nav-shop {
+  padding-top: 60px;
+  margin-bottom: 60px;
+}
+
+ .nav-shop h1 {
+   margin: 0;
+ }
+
+ .nav-shop ul {
+   margin: 0;
+   padding: 0;
+   display: flex;
+ }
+
+ .nav-shop li {
+   list-style: none;
+   display: inline;
+   padding-right: 40px;
+ }
+
+ .nav-shop li:not(:last-child) a:after {
+   content: "";
+   width: 9px;
+   height: 9px;
+   background-color: #000000;
+   position: absolute;
+   right: -24.5px;
+   top: 4.75px;
+   transform: rotate(45deg);
+ }
+
+ .nav-shop a {
+   color: #000000;
+   position: relative;
+
+ }
+
+ .nav-shop a:hover,
+ .nav-shop a:focus {
+   color: #CEAB0C;
+   outline: none;
+ }
+
+.filter {
+  max-width: 170px;
+  margin-right: 70px;
+}
+
 
  .barbershop-shop .container {
    display: flex;
+   justify-content: space-between;
+
  }
 
  .table-product table {
@@ -836,20 +940,225 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 
 .table-product .item {
   width: 220px;
-  height: 280px;
-  margin-left: 20px;
-  margin-bottom: 15px;
+  height: 285px;
+
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 .table-product {
   display:flex;
   flex-wrap: wrap;
+  width: 705px;
+  justify-content: flex-start;
 }
 
+.table-product .item {
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #FFFAFA;
+}
+
+.item .item-description {
+  text-transform: none;
+  margin: auto 15px ;
+  font-size: 12px;
+  line-height: 20px;
+  width: 190px;
+}
+
+.item .price-buy {
+  margin: 15px;
+}
+
+.item img {
+  width: 100%;
+  height: 165px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
+
+.table-product .item:nth-child(3n) {
+  margin-right: 0;
+}
 
 .disabled a {
   color: gray;
   cursor: default;
   pointer-events: none;
+}
+
+
+/* Всплывающие окна  */
+
+.modal {
+  background-color: #f8f3f0;
+  color: #000000;
+  position: fixed;
+}
+
+.modal-login {
+  top: 120px;
+  left: 50%;
+  margin-left: -230px;
+  width: 300px;
+  padding: 50px 80px;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7)
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: -34px;
+  width: 22px;
+  height: 22px;
+  font-size: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal-close::after,
+.modal-close::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 2px;
+  width: 19px;
+  height: 3px;
+  background-color: #d0d0d0;
+}
+
+.modal-close::after {
+  transform: rotate(45deg);
+}
+
+.modal-close::before {
+  transform: rotate(-45deg);
+}
+
+.modal-login h2 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.modal-description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  font: inherit;
+  color: #000000;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: 300px;
+  padding: 10px 15px;
+  padding-right: 40px;
+  background-color: #f9f6f3;
+  border: 2px solid #000000;
+}
+
+.login-icon-user {
+  background-image: url("img/lock.svg");
+  background-repeat: no-repeat;
+  background-position: 270px center;
+}
+
+.login-icon-password {
+  background-image: url("img/lock.svg");
+  background-repeat: no-repeat;
+  background-position: 270px center;
+}
+
+.login-password-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.login-checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.login-checkbox input[type="checkbox"] +
+.checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  border: 2px solid #000000;
+}
+
+.login-checkbox input[type="checkbox"] +
+.checkbox-indicator {
+  border-color: #663d15;
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.login-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator::before,
+.login-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 1px;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.login-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator::before {
+  transform: rotate(45deg);
+}
+
+.login-checkbox input[type="checkbox"]:checked +
+.checkbox-indicator::after {
+  transform: rotate(-45deg);
+}
+
+.login-form .button {
+  width: 100%;
+  margin: 0;
+}
+
+.modal-login {
+  display: none;
+}
+
+.modal-map {
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 766px;
+  height: 561px;
+  margin-top: -280px;
+  margin-left: -390px;
+  border: 7px solid white;
+}
+
+.modal-map p {
+  margin: 0;
 }
