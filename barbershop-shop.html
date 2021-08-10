@@ -48,22 +48,53 @@
 
 <div class="container">
   <section class="filter">
-<h2>производители</h2>
-<ul>
-  <li>BAXTER OF CALIFORNIA</li>
-  <li>MR NATTY</li>
-  <li>SUAVECITO</li>
-  <li>MALIN+GOETZ</li>
-  <li>MURRAY`S</li>
-  <li>AMERICAN CREW</li>
-</ul>
-<h2>Группы товаров:</h2>
-<ul>
-  <li>Бритвенные принадлежности</li>
-  <li>Средства для ухода</li>
-  <li>Аксессуары</li>
-</ul>
-<button type="button" name="button" class="button">показать</button>
+    <h2 class="visually-hidden">Фильтр товаров</h2>
+    <form class="filter" action="index.html" method="get">
+      <fieldset>
+        <legend>Производители:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="BAXTER OF CALIFORNIA" value="" id="filter-BAXTER-OF-CALIFORNIA">
+              <label for="filter-BAXTER-OF-CALIFORNIA">BAXTER OF CALIFORNIA</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="MR NATTY" value="" id="filter-MR-NATTY">
+              <label for="filter-MR-NATTY">MR NATTY</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="SUAVECITO" value="" id="filter-SUAVECITO">
+              <label for="filter-SUAVECITO">SUAVECITO</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="MALIN+GOETZ" value="" id="filter-MALIN-GOETZ">
+              <label for="filter-MALIN-GOETZ">MALIN+GOETZ</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="MURRAY`S" value="" id="filter-MURRAY`S">
+              <label for="filter-MURRAY`S">MURRAY`S</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="AMERICAN CREW" value="" id="filter-AMERICAN-CREW">
+              <label for="filter-AMERICAN-CREW">AMERICAN CREW</label>
+            </li>
+          </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Группы товаров:</legend>
+          <ul>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="" id="filter-shave">
+              <label for="filter-shave">>БРИТВЕННЫЕ ПРИНАДЛЕЖНОСТИ</label</li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="" id="filter-care">
+              <label for="filter-care">СРЕДСТВА ДЛЯ УХОДА</label></li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="product-group" value="" id="filter-accesories">
+              <label for="filter-accesories">АКСЕССУАРЫ</label></li>
+          </ul>
+      </fieldset>
+      <button type="submit"  class="filter-button button">Показать</button>
+    </form>
 </section>
 
 <section class="table-product">
@@ -135,16 +166,12 @@
 
 </section>
 </div>
-<table class="slider">
-  <tbody>
-    <tr>
-      <td><span class="button">1</span> </td>
-      <td><span class="button">2</span> </td>
-      <td><span class="button">3</span> </td>
-      <td><span class="button">4</span> </td>
-    </tr>
-  </tbody>
-</table>
+<ul class="pagination-list">
+  <li class="pagination-item"><a href="#">1</a></li>
+  <li class="pagination-item pagination-item-current"><a href="#">2</a></li>
+  <li class="pagination-item"><a href="#">3</a></li>
+  <li class="pagination-item"><a href="#">4</a></li>
+</ul>
 </div>
   </main>
   <footer class="main-footer mainor-footer">
