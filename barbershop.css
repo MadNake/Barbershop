@@ -1148,6 +1148,8 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
   display: none;
 }
 
+
+
 .modal-map {
   top: 50%;
   left: 50%;
@@ -1161,4 +1163,8 @@ box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.8)
 
 .modal-map p {
   margin: 0;
+}
+
+.modal-show {
+  display: block;
 }

@@ -25,7 +25,7 @@
 
     </ul>
     <ul class="user-navigation">
-      <li><a class="login-link" href="#">Вход</a></li>
+      <li><a class="login-link" href="login.html">Вход</a></li>
     </ul>
       </div>
     </div>
@@ -145,7 +145,7 @@
 
   <p class="footer-contact">Барбершоп "Бородинский"<br>
   Адрес: Г. Санкт-Петербург, ул. Б. Конюшенная, Д. 19/8 <br>
-<a href="">Как нас найти?</a><br>
+<a class="map-link" href="">Как нас найти?</a><br>
 Телефон: +7 (495) 666-02-66</p>
 
 <div class="footer-social">
@@ -206,4 +206,28 @@
 <button class="modal-close" type="button">Закрыть</button>
 </section>
 </body>
+<script type="text/javascript">
+  var link = document.querySelector(".login-link");
+  var popup = document.querySelector(".modal-login");
+  var close = document.querySelector(".modal-close");
+  var login = popup.querySelector("[name=login]");
+  var form = popup.querySelector("form");
+  var password = popup.querySelector("[name=password]")
+
+  link.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    popup.classList.add("modal-show");
+    login.focus();
+  });
+
+  close.addEventListener("click", function() {
+    popup.classList.remove("modal-show");
+  });
+
+  form.addEventListener("submit", function(evt) {
+    evt.preventDefault();
+    console.log(login.value);
+    console.log(password.value);
+  })
+</script>
 </html>
