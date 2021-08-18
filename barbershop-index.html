@@ -106,7 +106,7 @@
         <p>Время работы:<br>
         ПН-ПТ: с 10:00 до 22:00 <br>
       СБ-ВС: с 10:00 до 19:00</p>
-     <a href="#" class="button">Как проехать</a>
+     <a href="#" class="button button-map">Как проехать</a>
      <a href="#" class="button"> Обратная связь</a>
   </section>
 
@@ -201,9 +201,10 @@
 <section class="modal modal-map">
   <h2 class="visually-hidden">Как до нас добраться</h2>
   <p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6008858449889!2d30.321409600304424!3d59.93876462299192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sua!4v1629268038461!5m2!1sru!2sua" width="766" height="561" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     <img src="img/map.jpg" width="780" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
    </p>
-<button class="modal-close" type="button">Закрыть</button>
+<button class="modal-close map-modal-close" type="button">Закрыть</button>
 </section>
 </body>
 <script type="text/javascript">
@@ -213,21 +214,66 @@
   var login = popup.querySelector("[name=login]");
   var form = popup.querySelector("form");
   var password = popup.querySelector("[name=password]")
+  var storage = localStorage.getItem("login")
+  var mapLink = document.querySelector(".button-map")
+  var mapPopup = document.querySelector(".modal-map")
+  var mapClose = document.querySelector(".map-modal-close")
 
   link.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
     login.focus();
+    if (storage) {
+      login.value= storage;
+      password.focus();
+    } else {
+      login.focus();
+    };
   });
 
   close.addEventListener("click", function() {
     popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
   });
 
   form.addEventListener("submit", function(evt) {
-    evt.preventDefault();
     console.log(login.value);
     console.log(password.value);
+    if (!login.value || !password.value) {
+      evt.preventDefault();
+      popup.classList.add("modal-error");
+  } else {
+      localStorage.setItem("login", login.value);
+    }
+  });
+
+  window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27) {
+      if (popup.classList.contains("modal-show")) {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+      }
+    }
+  });
+
+  mapLink.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show-map");
+  });
+
+  mapClose.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    if (mapPopup.classList.contains("modal-show-map")) {
+      mapPopup.classList.remove("modal-show-map")
+    }
+  })
+
+  window.addEventListener("keydown", function(evt) {
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show-map")) {
+        mapPopup.classList.remove("modal-show-map")
+      }
+    }
   })
 </script>
 </html>
